@@ -1,5 +1,9 @@
 # Battleships
 
+## Author
+
+Andreas Thanopoulos
+
 ## Overview
 
 #### This is a simple GUI PvE game of Battleships with two modes:
@@ -43,7 +47,3 @@ And wait for everything to get built. The executable should appear in the build 
 - [FLTK](https://www.fltk.org)
 - [pybind11](https://github.com/pybind/pybind11)
 - [NEAT-python](https://neat-python.readthedocs.io/en/latest)
-
-## Author
-
-Andreas Thanopoulos
