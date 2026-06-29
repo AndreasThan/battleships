@@ -1,9 +1,6 @@
 #include <stdexcept>
 #include <iostream>
 
-#ifndef UTILS_H
-#define UTILS_H
-
 #include <utils.h>
 #include <GameController.h> //includes basically every header
 
@@ -28,7 +25,7 @@ void printCell(Cell cell)
 
 char numToLetter(int n)
 {
-    if(n >= 0 || n <= 25){
+    if(n >= 0 && n <= 25){
         return static_cast<char>('A' + n);
     }
     else{
@@ -103,4 +100,3 @@ void printBoard(Player& p)
         std::cout << std::endl;
     }
 }
-#endif

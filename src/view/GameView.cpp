@@ -15,7 +15,7 @@ void GameView::loadSprites()
     // sprites paths
     const unsigned int spriteCount = 4;
     std::string spriteFileEncoding = ".png";
-    std::string spriteDir = "../assets/";
+    std::string spriteDir = "assets/";
     std::string spriteNames[spriteCount] = {"cell_default", "cell_hit", "cell_miss", "cell_shipSank"};
 
     for (int i = 0; i < spriteCount; i++)

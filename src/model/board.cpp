@@ -83,7 +83,7 @@ unsigned int Board::getSize() const
 
 Cell& Board::getCell(Coord c)
 {
-    if (c.x < 0 || c.x >= size || c.y < 0 || c.y >= size) {
+    if (c.x >= size || c.y >= size) {
         throw std::out_of_range("getCell: coordinates out of range");
     }
 

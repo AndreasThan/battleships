@@ -1,28 +1,40 @@
 cmake_minimum_required(VERSION 3.10)
+
 project(Battleships)
 
-# Set cmake version
+# C++ version
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Copy assets folder to the build folder so the executable can find the sprites
-file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
-
-# Add the FLTK dir so cmake can find it
+# Add FLTK
 add_subdirectory(external/fltk)
 
+# Source files
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
+    "src/*.cpp"
+)
+
+# Executable target
+add_executable(Battleships
+    ${SOURCES}
+)
+
 # Include headers
-include_directories(
+target_include_directories(Battleships PRIVATE
     ${PROJECT_SOURCE_DIR}/include/controller
     ${PROJECT_SOURCE_DIR}/include/model
     ${PROJECT_SOURCE_DIR}/include/util
     ${PROJECT_SOURCE_DIR}/include/view
 )
 
-# Source files
-file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "src/*.cpp")
-
-# Executable
-add_executable(Battleships ${SOURCES})
+# C++ features
+target_compile_features(Battleships PRIVATE cxx_std_17)
 
 # Link FLTK
-target_link_libraries(Battleships fltk fltk_images)
+target_link_libraries(Battleships PRIVATE
+    fltk
+    fltk_images
+)
+
+# Copy assets folder to the build folder
+file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})

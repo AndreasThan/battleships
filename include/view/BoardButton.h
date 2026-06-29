@@ -59,7 +59,7 @@ public:
      *         The caller is responsible for managing the memory of the
      *         returned image (e.g., deleting it when no longer needed).
      */
-    Fl_RGB_Image* BoardButton::makeDimmedSprite(const Fl_PNG_Image* src, float factor);
+    Fl_RGB_Image* makeDimmedSprite(const Fl_PNG_Image* src, float factor);
 };
 }
 #endif
