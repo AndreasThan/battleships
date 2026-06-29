@@ -1,9 +1,0 @@
-FLTK 1.5 is based on the release of FLTK 1.4.2. Later updates and
-bug fixes may be backported to 1.4.x (x > 2).
-
-FLTK 1.5 is intended to be mostly API compatible with FLTK 1.4.x so
-you don't need to change source code when you switch to FLTK 1.5.
-However, all programs must be recompiled with FLTK 1.5 because the
-ABI (Application Binary Interface) has changed.
-
-More info TBD.
